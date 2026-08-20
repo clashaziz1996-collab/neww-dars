@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: eduschedule
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/schedule
+    envVars:
+      - key: NODE_VERSION
+        value: 20
